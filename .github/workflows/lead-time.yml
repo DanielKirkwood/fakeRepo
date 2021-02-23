@@ -12,9 +12,6 @@ jobs:
             uses: SE06-Glasgow-University/lead-time-for-change-action@v1.2
             with:
                 auth-token: ${{ secrets.GITHUB_TOKEN }}
-                web-token: ${{ secrets.LEAD_TIME_ACTION_TOKEN }}
-                calculate-previous-releases: true
-                number-of-releases: 4
                 
         -   name: output lead time for change
             run: echo "The lead time for change in days is ${{ steps.lead-time.outputs.lead-time-for-change }}"
