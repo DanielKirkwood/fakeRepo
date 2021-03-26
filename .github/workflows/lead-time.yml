@@ -13,6 +13,7 @@ jobs:
             with:
                 auth-token: ${{ secrets.GITHUB_TOKEN }}
                 web-token: ${{ secrets.LEAD_TIME_ACTION_TOKEN }}
+                calculate-previous-releases: false
                 
         -   name: output lead time for change
             run: echo "The lead time for change in days is ${{ steps.lead-time.outputs.lead-time-for-change }}"
